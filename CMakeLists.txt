@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.0)
+project(fortdbg Fortran)
+
+enable_language(Fortran)
+#set(CMAKE_Fortran_FLAGS_DEBUG "-Og -g -fcheck=all -fbacktrace -finit-real=nan -finit-integer=-999999")
+set(CMAKE_Fortran_FLAGS_DEBUG "-Og -g")
+add_subdirectory(simple)
+add_subdirectory(coredump)
+add_subdirectory(multithread)
+add_subdirectory(mpi)
